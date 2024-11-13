@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDI Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1>MIDI Auto Recorder</h1>
+        </div>
+
+        <div class="card-content">
+            <div id="deviceError" class="device-error">
+                Device disconnected! Waiting for reconnection...
+            </div>
+
+            <div class="control-section">
+                <div class="record-controls-container">  <!-- New wrapper div -->
+                    <div class="recording-controls">
+                        <div class="record-section">
+                            <select id="deviceSelect" class="device-select">
+                                <option value="">Select device</option>
+                            </select>
+
+                            <button id="hookButton" class="button secondary-button">
+                                <span class="button-content">
+                                    <div class="hook-dot"></div>
+                                    Hook for Recording
+                                </span>
+                            </button>
+
+                            <button id="unhookButton" class="button secondary-button unhook-button">
+                                <div class="button-content">
+                                    <div class="unhook-dot"></div>
+                                    Unhook
+                                </div>
+                            </button>
+
+                            <button id="recordButton">
+<!--                                  class="button record-button hidden">
+                                    <span class="button-content">
+                                    <div class="record-dot"></div>
+                                    Start Recording
+                                </span>  -->
+                            </button>
+
+                            <div id="recordingTimer" class="recording-timer">
+                                00:00
+                            </div>
+
+                            <div id="midiIndicator" class="midi-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recording-info">
+                    <div id="lastRecording" class="last-recording hidden">
+                        Last recording: <span id="lastRecordingName"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="recordings-section">
+                <div class="recordings-header">
+                    Recordings
+                </div>
+                <div id="recordingsList" class="recordings-list">
+                </div>
+                <div class="playback-controls">
+                    <button id="downloadButton" class="button secondary-button" disabled>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                        </svg>
+                        Download
+                    </button>
+                    <button id="playButton" class="button secondary-button" disabled>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Play
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
