@@ -14,3 +14,15 @@ Recording ends automatically when there was no note played for 30 seconds.
 - npm install
 - npm start
 - Navigate to http://127.0.0.1:8090/
+
+
+# TODO
+ - Delete midi file
+ - Force stop recording, but stay hoocked
+ - Play file in browser
+
+# Fantasy TODO
+ - Multiple devices support
+ - Implement MIDI using GPIO
+ - Save to storage
+ - Port to pi-pico
